@@ -41,3 +41,5 @@ function Book(title, price, author) {
 const book1 = new Book('JavaScript Made Easy', 30.99, 'Robin Dabas')
 book1.applyDiscount(20);
 console.log(book1.price)
+
+//Finished Meta Coursera Front-end Dev - Module 3 Lesson: Constructors 
