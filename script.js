@@ -24,3 +24,20 @@ const anaconda = new Snake('Anaconda')
 
 python.hiss();
 anaconda.hiss();
+
+//I just returned to studying code after 2 weeks away
+
+
+function Book(title, price, author) {
+  this.title = title;
+  this.price = price;
+  this.author = author;
+  this.inStock = true;
+  this.applyDiscount = function(discount) {
+    this.price -= price * (discount / 100);
+  };
+}
+
+const book1 = new Book('JavaScript Made Easy', 30.99, 'Robin Dabas')
+book1.applyDiscount(20);
+console.log(book1.price)
