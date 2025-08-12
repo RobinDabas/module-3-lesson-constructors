@@ -43,3 +43,4 @@ book1.applyDiscount(20);
 console.log(book1.price)
 
 //Finished Meta Coursera Front-end Dev - Module 3 Lesson: Constructors 
+//Practiced with various exercisesw with the assistance of Grok
