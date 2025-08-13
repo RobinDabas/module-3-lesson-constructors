@@ -44,3 +44,17 @@ console.log(book1.price)
 
 //Finished Meta Coursera Front-end Dev - Module 3 Lesson: Constructors 
 //Practiced with various exercisesw with the assistance of Grok
+
+
+function Musician(genre, song, author) {
+  this.genre = genre;
+  this.song = song;
+  this.author = author;
+  this.inStock = function() {
+    console.log(`${this.author} es una artista gigante en el mundo hispanohablante.`)
+  }
+}
+
+const musician = new Musician('reggaeton', 'Secreto', 'Anuel AA')
+console.log(musician);
+musician.inStock();
