@@ -58,3 +58,105 @@ function Musician(genre, song, author) {
 const musician = new Musician('reggaeton', 'Secreto', 'Anuel AA')
 console.log(musician);
 musician.inStock();
+
+
+let pajaro = {
+  tieneAlas: true,
+  puedeVolar: true,
+  tienePlumas: true
+}
+
+let agila1 = Object.create(pajaro);
+console.log('agila1: ', agila1)
+
+console.log('agila1 tiene alas:', agila1.tieneAlas);
+console.log('agila1 puede volar:', agila1.puedeVolar);
+console.log('agila1 tiene plumas:', agila1.tienePlumas)
+
+
+function Artista(nombre, éxito) {
+  this.nombre = nombre;
+  this.éxito = éxito;
+}
+
+Artista.prototype.actuación = function() {
+  console.log(`${this.nombre} enloquece al público con su canción ${this.éxito}.`)
+}
+
+function Cantante(nombre, éxito) {
+  Artista.call(this, nombre, éxito);
+}
+Cantante.prototype = Object.create(Artista.prototype);
+Cantante.prototype.flow = function() {
+  console.log(`${this.nombre} es un cantante cheverísimo.`)
+};
+Cantante.prototype.flow2 = function() {
+  console.log(`${this.nombre} es una cantante cheverísima.`)
+}
+
+const cantantePrincipal = new Cantante('Anuel AA', 'Secreto');
+const cantanteDestacada = new Cantante('Karol G', 'Secreto')
+
+cantantePrincipal.actuación();
+cantantePrincipal.flow();
+cantanteDestacada.actuación();
+cantanteDestacada.flow2();
+
+
+
+function Artist(name, genre) {
+  this.name = name;
+  this.genre = genre;
+}
+
+Artist.prototype.performance = function() {
+  console.log(`${this.name} is one of the best artists in the Arabian Peninsula in the genre of ${this.genre}, a traditional Arabian music found in countries like Yemen, Libya and the rest of the GCC countries.`)
+}
+
+function Singer(name, genre) {
+  Artist.call(this, name, genre)
+}
+Singer.prototype = Object.create(Artist.prototype)
+Singer.prototype.flow = function() {
+  console.log(`${this.name} has an amazing voice and really nice songs that are listened too all throughout the Arab world from Algeria all the way to Oman.`)
+}
+Singer.prototype.flow2 = function() {
+  console.log(`${this.name} is a ${this.genre} singer and has amazing songs that pump you for lifting weights in the gym.`)
+}
+
+const yemeniSinger = new Singer('Abu Hanthala', 'Shaylat');
+const saudiSinger = new Singer('Fahed Abu Fasla', 'Shaylat')
+
+yemeniSinger.performance();
+yemeniSinger.flow();
+saudiSinger.performance();
+saudiSinger.flow2();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
